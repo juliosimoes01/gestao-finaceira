@@ -790,8 +790,7 @@ export default function Home() {
                       {monthWeeks.map((week, idx) => (
                         <div key={idx} className="weekRow">
                           {week.map((d) => {
-                            const isSelected =
-                              period === "day" && selectedDay === d.key;
+                            const isSelected = selectedDay === d.key;
                             const hasOps = (opsByDay.get(d.key) || 0) > 0;
                             return (
                               <button
